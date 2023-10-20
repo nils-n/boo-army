@@ -1,0 +1,49 @@
+.menu {
+  display: none;
+}
+.cross {
+  display: none;
+}
+.hiding {
+  display: block;
+}
+@media (max-width: 1025px) {
+  body {
+    height: fit-content !important;
+  }
+}
+@media (max-width: 1014px) {
+  body {
+    height: 100vh !important;
+  }
+}
+@media (max-width: 732px) {
+  html {
+    font-size: 13px;
+  }
+  .menu {
+    display: block;
+    padding: 5px 0;
+  }
+  .cross {
+    display: block;
+  }
+
+  .hiding {
+    display: none;
+  }
+
+  .main-block {
+    margin-top: 40px;
+  }
+  .footer-content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 545px) {
+  body {
+    height: auto !important;
+  }
+}
+/* //////////////////////////////// */
