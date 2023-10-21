@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Haunted Room</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #dialog-container {
+        position: absolute;
+        top: 50%; /* Set the top position to 50% of the screen height */
+        left: 50%; /* Set the left position to 50% of the screen width */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* Move the element up and left by 50% of its own width and height */
+        text-align: center; /* Center the text horizontally */
+        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1; /* Ensure it's above the canvas */
+      }
+
+      #buttons {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- UI Container for buttons and messages -->
+    <div id="dialog-container">
+      <p>This is a centered dialog message.</p>
+      <button id="close-button">Close</button>
+    </div>
+
+    <script type="module">
+      import * as THREE from "three";
+      import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+      const renderer = new THREE.WebGLRenderer();
+      const textureLoader = new THREE.TextureLoader();
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      const controls = new OrbitControls(camera, renderer.domElement);
+
+      const animate = () => {
+        requestAnimationFrame(animate);
+
+        // Add animations or interactions here
+
+        // controls.listenToKeyEvents(window); // optional
+        controls.update();
+
+        renderer.render(scene, camera);
+      };
+
+      const init = () => {
+        //controls.addEventListener( 'change', render ); // call this only in static scenes (i.e., if there is no animation loop)
+
+        controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+        controls.dampingFactor = 0.05;
+
+        controls.screenSpacePanning = false;
+
+        controls.minDistance = 2;
+        controls.maxDistance = 5;
+
+        controls.minPolarAngle = Math.PI / 4;
+        controls.maxPolarAngle = Math.PI / 2;
+        controls.minAzimuthAngle = -Math.PI / 4;
+        controls.maxAzimuthAngle = Math.PI / 4;
+
+        var start = 45; //current angle
+        //controls.maxAzimuthAngle = Math.degToRad(start + 180);
+        //controls.minAzimuthAngle = Math.degToRad(start - 180);
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        camera.position.set(0, 1, 4); // Adjust camera position
+        controls.update();
+
+        // Create floor
+        const floorGeometry = new THREE.BoxGeometry(6, 0.1, 6);
+        const floorMaterial = new THREE.MeshBasicMaterial({ color: 0x654321 }); // Brown color
+        const floor = new THREE.Mesh(floorGeometry, floorMaterial);
+        scene.add(floor);
+
+        // Create walls
+        const wall1Geometry = new THREE.BoxGeometry(6, 2, 0.1);
+        const wall2Geometry = new THREE.BoxGeometry(0.1, 2, 6);
+        const wall3Geometry = new THREE.BoxGeometry(0.1, 2, 6);
+
+        // Load wall texture
+        const wallTexture = textureLoader.load("./wall.jpeg");
+
+        const wallMaterial = new THREE.MeshBasicMaterial({
+          map: wallTexture,
+        });
+
+        const wall1 = new THREE.Mesh(wall1Geometry, wallMaterial);
+        const wall2 = new THREE.Mesh(wall2Geometry, wallMaterial);
+        const wall3 = new THREE.Mesh(wall3Geometry, wallMaterial);
+
+        wall1.position.set(0, 1, -3);
+        wall2.position.set(3, 1, 0);
+        wall3.position.set(-3, 1, 0);
+
+        scene.add(wall1);
+        scene.add(wall2);
+        scene.add(wall3);
+      };
+
+      init();
+      animate();
+    </script>
+  </body>
+</html>
