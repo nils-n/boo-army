@@ -2,27 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/story.css">
+
+
     <title>Haunted Mansion Game</title>
 </head>
 <body>
@@ -39,6 +21,15 @@
             </ul>
         </div>
     </div>
-    <script src="story.js"></script>
+    <div id="basement-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                You open the door to the dark, foreboding basement. As you descend the creaky stairs, you hear shuffling and moaning in the shadows. It's too late to turn back now; you've ventured too far. Suddenly, a group of ravenous zombies emerges from the darkness and devours you, your screams echoing in the basement's depths.
+            </p>
+            <p>Your choices have led to a gruesome end.</p>
+            <p>The End.</p>
+        </div>
+    </div>
+    <script src="assets/script/story.js"></script>
 </body>
 </html>
