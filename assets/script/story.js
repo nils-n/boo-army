@@ -8,7 +8,8 @@ const defendButton = document.getElementById('defend-button');
 const reasonButton = document.getElementById('reason-button');
 const escapeModal = document.getElementById('escape-modal');
 const defendModal = document.getElementById('defend-modal');
-
+const basementButton = document.getElementById('basement-button');
+const reasonModal = document.getElementById('reason-modal');
 
 door2Button.addEventListener('click', function() {
     // Hide the haunted mansion modal
@@ -31,4 +32,14 @@ defendButton.addEventListener('click', function() {
     diningRoomModal.style.display = 'none';
     defendModal.style.display = "block";
 
+})
+
+basementButton.addEventListener('click', function() {
+    defendModal.style.display = 'none';
+    basementModal.style.display = 'block';
+});
+
+reasonButton.addEventListener('click', function() {
+    diningRoomModal.style.display = 'none';
+    reasonModal.style.display = 'block';
 })
