@@ -7,6 +7,7 @@ const runButton = document.getElementById('run-button');
 const defendButton = document.getElementById('defend-button');
 const reasonButton = document.getElementById('reason-button');
 const escapeModal = document.getElementById('escape-modal');
+const defendModal = document.getElementById('defend-modal');
 
 
 door2Button.addEventListener('click', function() {
@@ -25,3 +26,9 @@ runButton.addEventListener('click', function() {
     diningRoomModal.style.display = 'none';
     escapeModal.style.display = 'block';
 });
+
+defendButton.addEventListener('click', function() {
+    diningRoomModal.style.display = 'none';
+    defendModal.style.display = "block";
+
+})
