@@ -7,13 +7,14 @@
   body {
   background-image: url(../images/hauntedbackground.png);
   width: 100%;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: repeat;
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
-  justify-content: space-between;
+  background-repeat: no-repeat;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 250px; */
+  /* justify-content: space-between; */
   align-items: center;
   }
   
@@ -38,8 +39,10 @@
   
   /* Rules box */
   .rules-box {
+  width: 100%;
   position: absolute;
   top: 20%;
+  padding: 20px;
   }
   .rules {
   max-width: 800px;
@@ -62,10 +65,6 @@
   }
   
   /* Burning Heading */
-  .main-block {
-  overflow: hidden;
-  position: relative;
-  }
   
   .main-title {
   font-size: 3rem;
@@ -74,7 +73,7 @@
   color: transparent;
   text-transform: uppercase;
   text-align: center;
-  padding: 50px;
+  margin-top: 100px;
   font-family: "Kenia", sans-serif;
   font-family: "Mukta", sans-serif;
   font-family: "Nosifer", sans-serif;
@@ -118,7 +117,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 30px;
   }
   
@@ -206,10 +204,10 @@
   
   .play-game .btn {
   width: 7em;
+  height: 3em;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ff4d00;
-  border-radius: 10px;
   cursor: pointer;
   }
   
@@ -244,11 +242,13 @@
   }
   
   footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   }
   
   .container {
-  padding: 20px 20px;
+  padding: 40px 20px;
   margin: auto;
   max-width: 1800px;
   }
