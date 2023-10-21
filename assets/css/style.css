@@ -2,46 +2,54 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
   background-image: url(../images/hauntedbackground.png);
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   display: flex;
   gap: 30px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-
-.visibility {
-  visibility: hidden;
-}
-
-/* Navbar  */
-
-.navbar {
+  }
+  
+  .visibility {
+  display: none;
+  }
+  
+  /* Navbar */
+  
+  .navbar {
   position: absolute;
   top: 35px;
-  right: 35px;
-}
-.navbar a {
+  right: 65px;
+  z-index: 5;
+  }
+  .navbar a {
+  margin: 5px 10px;
+  padding: 0;
+  display: inline-block;
   text-decoration: none;
-}
-
-/* Rules box  */
-
-.rules {
+  }
+  
+  /* Rules box */
+  .rules-box {
+  position: absolute;
+  top: 20%;
+  }
+  .rules {
+  max-width: 800px;
   background-color: white;
   padding: 25px;
   border-radius: 15px;
-  margin: 20px;
+  margin: 20px auto;
   position: relative;
-}
-.rule-close-btn {
+  }
+  .rule-close-btn {
   position: absolute;
   top: 15px;
   font-size: 22px;
@@ -49,17 +57,17 @@ body {
   background-color: black;
   color: white;
   padding: 5px;
-
+  
   right: 25px;
-}
-
-/* Burning Heading  */
-.main-block {
+  }
+  
+  /* Burning Heading */
+  .main-block {
   overflow: hidden;
   position: relative;
-}
-
-.main-title {
+  }
+  
+  .main-title {
   font-size: 3rem;
   background: linear-gradient(to right, #ffffff, #fafdfd, #ffffffb3);
   -webkit-background-clip: text;
@@ -72,23 +80,24 @@ body {
   font-family: "Nosifer", sans-serif;
   position: relative;
   overflow: hidden;
-  text-shadow: 2px 2px 4px #fafafa; 
-}
-.main-title:hover {
+  text-shadow: 2px 2px 4px #fafafa;
+  }
+  .main-title:hover,
+  .navbar a:hover {
   animation: glow 1.5s ease-in-out infinite;
-}
-@keyframes glow {
+  }
+  @keyframes glow {
   0% {
-    text-shadow: 2px 2px 4px #ff6600;
+  text-shadow: 2px 2px 4px #ff6600;
   }
   50% {
-    text-shadow: 2px 2px 15px #ff6600;
+  text-shadow: 2px 2px 15px #ff6600;
   }
   100% {
-    text-shadow: 2px 2px 4px #ff6600;
+  text-shadow: 2px 2px 4px #ff6600;
   }
-}
-.main-title::before {
+  }
+  .main-title::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -98,46 +107,55 @@ body {
   transition: all 0.5;
   z-index: -1;
   opacity: 0;
-}
-
-.main-title:hover::before {
+  }
+  
+  .main-title:hover::before {
   opacity: 1;
-}
-
-.story-buttons {
+  }
+  
+  .story-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
-}
-
-.main-block {
+  }
+  
+  .main-block {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-}
-
-a {
+  }
+  
+  a {
   font-size: 1.5rem;
-  padding: 1rem 3rem;
+  /* padding: 1rem 3rem; */
   color: #ffffff;
   text-transform: uppercase;
-}
-
-.btn {
+  }
+  .story-buttons {
+  margin-top: 80px;
+  }
+  
+  .btn {
+  word-spacing: 5px;
   text-decoration: none;
   border: 1px solid #efc590;
   position: relative;
   overflow: hidden;
-}
-
-.btn:hover {
+  display: inline-block;
+  width: 500px;
+  padding: 20px 0;
+  text-align: center;
+  }
+  
+  .btn:hover {
   box-shadow: 1px 1px 25px 10px #ff0000;
-}
-
-.btn:before {
+  }
+  
+  .btn:before {
   content: "";
   position: absolute;
   top: 0;
@@ -146,62 +164,62 @@ a {
   height: 100%;
   background: linear-gradient(120deg, transparent, #ff4d00, transparent);
   transition: all 650ms;
-}
-
-.btn:hover:before {
+  }
+  
+  .btn:hover:before {
   left: 100%;
-}
-
-.instruction-box {
+  }
+  
+  .instruction-box {
   display: flex;
   justify-content: center;
-}
-
-.hidden {
+  }
+  
+  .hidden {
   display: none;
-}
-
-.rules-content-title {
+  }
+  
+  .rules-content-title {
   margin-bottom: 20px;
   text-align: center;
-}
-
-.game-info {
+  }
+  
+  .game-info {
   margin: 10px;
-}
-
-.game-info p {
+  }
+  
+  .game-info p {
   font-family: sans-serif;
   font-size: 1.1rem;
   margin: 5px 0;
-}
-
-.game-rules {
+  }
+  
+  .game-rules {
   padding: 10px;
-}
-
-.game-rules p {
+  }
+  
+  .game-rules p {
   font-family: sans-serif;
   font-size: 1.1rem;
   margin: 5px 0;
-}
-
-.play-game .btn {
+  }
+  
+  .play-game .btn {
   width: 7em;
   height: 3em;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ff4d00;
   cursor: pointer;
-}
-
-.play-game .btn:before {
+  }
+  
+  .play-game .btn:before {
   height: 3em;
-}
-
-/* closing the instructions - x button*/
-
-.closingbtn {
+  }
+  
+  /* closing the instructions - x button*/
+  
+  .closingbtn {
   border-radius: 10px;
   position: absolute;
   top: 25px;
@@ -211,38 +229,38 @@ a {
   background-color: #ff6600;
   color: white;
   cursor: pointer;
-}
-
-.play-game {
+  }
+  
+  .play-game {
   text-align: center;
-}
-
-/* Footer */
-
-.footer-container {
+  }
+  
+  /* Footer */
+  
+  .footer-container {
   background-color: #0000006c;
   transition: 0.5s;
   width: 100%;
-}
-
-footer {
+  }
+  
+  footer {
   width: 100%;
-}
-
-.container {
+  }
+  
+  .container {
   padding: 40px 20px;
   margin: auto;
   max-width: 1800px;
-}
-.footer-content {
+  }
+  .footer-content {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-left h1 {
+  }
+  
+  .footer-left h1 {
   font-family: "Kenia", sans-serif;
   font-family: "Mukta", sans-serif;
   font-family: "Nosifer", sans-serif;
@@ -250,56 +268,56 @@ footer {
   color: #a00;
   text-shadow: 2px 2px 0px #ffffff;
   animation: glowAnimation 2s infinite;
-}
-
-footer a {
+  }
+  
+  footer a {
   text-decoration: none;
   padding: 10px 0;
   margin: 10px;
-}
-li {
+  }
+  li {
   list-style: none;
-}
-
-.footer-middle p {
+  }
+  
+  .footer-middle p {
   font-size: 1.2rem;
   font-family: "Handjet";
   color: #f89952;
   font-weight: 600;
   letter-spacing: 2px;
   text-align: center;
-}
-
-.footer-middle a {
+  }
+  
+  .footer-middle a {
   font-size: 1.2rem;
   color: #f89952;
   padding: 0;
-}
-
-.footer-right h2 {
+  }
+  
+  .footer-right h2 {
   font-size: 1.3rem;
   font-family: "Handjet";
   letter-spacing: 2px;
   text-align: center;
   color: #a00;
-}
-.btn-pullup a {
+  }
+  .btn-pullup a {
   color: #f89952;
   position: relative;
   z-index: 5;
-}
-
-.footer-right .links {
+  }
+  
+  .footer-right .links {
   margin-top: 3px;
-}
-
-.social-links {
+  }
+  
+  .social-links {
   display: flex;
   justify-content: center;
-}
-
-.social-links a {
+  }
+  
+  .social-links a {
   font-size: 1.2rem;
   color: #ffffff;
   margin-right: 1.5rem;
-}
+  }
