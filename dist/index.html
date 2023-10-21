@@ -1,41 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Haunted Room</title>
-    <style>
-      body {
-        margin: 0;
-      }
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6dc5ea7d90.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="description"
+      content="An interactive horror story game where your choices determine your fate."
+    />
+    <meta name="author" content="Haunted Choices" />
+    <meta
+      name="keywords"
+      content="horror, interactive, story, game, choices, haunted, haunted choices, hauntedchoices, hauntedchoices.com"
+    />
 
-      #dialog-container {
-        position: absolute;
-        top: 50%; /* Set the top position to 50% of the screen height */
-        left: 50%; /* Set the left position to 50% of the screen width */
-        transform: translate(
-          -50%,
-          -50%
-        ); /* Move the element up and left by 50% of its own width and height */
-        text-align: center; /* Center the text horizontally */
-        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-        padding: 20px;
-        border-radius: 10px;
-        z-index: 1; /* Ensure it's above the canvas */
-      }
+    <!-- Font Awesome and Google fonts links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kenia&family=Mukta:wght@200;400;700&family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
 
-      #buttons {
-        margin-bottom: 10px;
-      }
-    </style>
-    <script type="module" crossorigin src="/assets/index-43c74d18.js"></script>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/boo-army/assets/apple-touch-icon-a84fc9fd.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAxVJREFUWEfNl00s23EYx7+taovqhNZbI+uU0ph1WewiEREyYwcyuwgHLg4OookQ0gUZO6EnO7hwcZBs6xpisuzAwWwittiaSb10L6qJtho1L622/+Xf7AX//78z7X/2XJ/f73k+v+fl9/s9HIIguAA6ADQCSMG/ESuARwAecgiC0AJ48NOv3+OBc2EBCfn5FBTC64V9dhbSwkJazF2TCRFRUYhOS6Po3XY7Dq1WXMrNPa67TwJsnj75dFERHHNz4HDJ4PwWv9eLnK4uqDrIgFHlyOXCeGoq4PdTlL7DQ5SvrSHmypXjOisJQJxe/aa2Fl9GR2mdFExOIrmsjDFRL9Rq7Cwt0erv+XyUQ/01QL5eD1llJSPA86wsfDOZ2AO4OTwMeV0dI4BBKoXHbmcPQD0wAKVGQw9AEHgcGQnC52MP4MbgIBSNZMfSCEHgqUgE3/4+OwBcgQAFU1Nwb22BoKl0YWIi1oeG8HVsjB0A0mqEUAiypZiEvAd8BwfsATB6PoMiLG14Bj+MS0IG4PB4iBSL4dneZnQikErhttnYSUGsUoni+Xm4jEb6IkxKwkJDA2zT0+wAiDIyULayEjQLz+LicLSzww5AjEKB8tXV/xwgPh5HTufFRcCQkMBYpCF3wVlSYJBI4HE4Qo/AgcUSeHbJh8U2M4PN8XHEpKcHrQGP04kJmQwR0dEUAK/LhVtGI2IzM0/oaP8Dqz8eHA6H82uxxWDA+7Y23F5eZizCvfV18MRiCCQSKsDuLvY3NiBWqf4MQDqTVVRQjBg7O5HT3R3KZUjZSxuBdxoNrut0lMWfR0dxuaaGXQC3w4GXeXm4YzZTHJl0OubPyDmxKBGw6PV4VVWFu3t7gS/2cXnb1AR1Xx+4fP453VG3UQA+9vbig1aLcrMZMXL5iR2vq6txtacHIoWCPYDNiQkstbSgZHERvFPtNFNcjOz2diSVlLAHEMzylEqF7NZWyOvrLwZALxZDpdUGIMIltKMZnXHyRnzC5+Nafz+Uzc3h8h8YzU4Mp8EsfxoZQXJpKYQpYRuiA8PphY7n3wHVn9x+MRDMLgAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAbtJREFUOE+Nk71LQlEYxh+93mvcQe8Vk6YgisCKIhyMaFMcS3BziMZoaGkMBJHQv6Clxa2GupGLo0tQJA0RRFAURF8g5c0i86sT9xVPCtn1TO97Pn7nOed9XgtjLAZgvabrkqgooMEYam9vaOWNz09AECDY7bRc1XVIilIFsGFhjFUASHfb2zhZXOSAYD4PZXq6yavXcdDfj/rHB+Wja2uYTKWIZQCYEd1rGo4ikSYAQOj8HM6JCZ7vO52ol0qUj8ViGI/HKe4KCBwfw+X3c0W7ogjWaPQIsFoxGI2iUS7TAaskoZDL4ev5uUcAF/53YPoEQZYxvLyMarHIFTxoGiqFQm8KJJcLCy8vHdfv9fXhu2IUrIdPFFUV4dfXDoAmy/xPuj7hMpmERRDwfnWFcJuCb8MHqsqrMLK62vLBbxn1szMoU1N06/XmJkZWVrgCoxoWmw1WUaS5WqkE0eHo9MFtOo2hpSWaLJ6eQvX5TGrRXOZGOpyfx8zODmyyjMdMBp5gkGKzwQFP2SwGQiH6g5utLbjn5uDwes3OkwJqpvadF4kEPIEA3LOzZgBqJmrndohhWcMLhoX/GdTOP8lW78OQVpnxAAAAAElFTkSuQmCC">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+
+    <!-- Browser Tab Title -->
+    <title>The Haunted Choices</title>
+    <script type="module" crossorigin src="/boo-army/assets/index-83152cc3.js"></script>
+    <link rel="stylesheet" href="/boo-army/assets/index-9d7f9d6e.css">
   </head>
   <body>
-    <!-- UI Container for buttons and messages -->
-    <div id="dialog-container">
-      <p>This is a centered dialog message.</p>
-      <button id="close-button">Close</button>
-    </div>
-
+    <div id="root"></div>
     
   </body>
 </html>
