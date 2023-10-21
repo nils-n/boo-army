@@ -202,7 +202,7 @@
   height: 3em;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ff4d00;
+  color: #f89952;
   cursor: pointer;
   }
   
@@ -219,7 +219,7 @@
   right: 25px;
   padding: 0 10px;
   font-size: 2rem;
-  background-color: #ff6600;
+  background-color: #f89952;
   color: white;
   cursor: pointer;
   }
@@ -260,7 +260,7 @@
   font-family: "Mukta", sans-serif;
   font-family: "Nosifer", sans-serif;
   font-size: 1.2rem;
-  color: #a00;
+  color: #ff0000;
   text-shadow: 2px 2px 0px #ffffff;
   animation: glowAnimation 2s infinite;
   }
@@ -294,7 +294,7 @@
   font-family: "Handjet";
   letter-spacing: 2px;
   text-align: center;
-  color: #a00;
+  color: #ff0000;
   }
   
   .footer-right .links {
@@ -369,7 +369,7 @@
     position: absolute;
     width: 0;
     height: 100%;
-    background-color: black;
+    background-color: #f89952;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
