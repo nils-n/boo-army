@@ -1,82 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/6dc5ea7d90.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-</head>
-<body>
-<!--NAVIGATION BAR-->
-<nav class="navbar" id="myNavbar">
-    <ul class="navbar-items">
-        <li>
-            <a href="#" id="home-link" aria-label="Go to the home view">Home</a>
-        </li>
-        <li>
-            <a href="#" id="rules-link" aria-label="Go to the rules view">How To Play</a>
-        </li>
-    </ul>
-    <!--GAME CONTROLS-->
-    <div class="sound-control">
-        <i class="fa-solid fa-volume-high" id="sound-on"></i> 
-        <i class="fa-sharp fa-solid fa-volume-xmark hide" id="sound-off"></i>
-    </div>
-</nav>
-<!--MAIN CONTENT-->
-<main>
-    <div class="main-block">
-        <h1 class="main-title">Haunted Choices</h1>
-    </div>
-    <p>Pick your Horror</p>
-    <div class="story-buttons">
-        <button class="first-story">NAME OF OUR STORY</button>
-        <button class="second-story">NAME (COMING SOON)</button>
-        <button class="third-story">NAME (COMING SOON)</button>
-    </div>
-<!--HOW TO PLAY MODULE-->
-    <div class="rules-content hide" id="rules">
-        <h2 class="rules-content-title">How To Play</h2>
-        <div class="game-info">
-        <p>Welcome to "Haunted Choices," an interactive horror story game where your choices determine your fate.</p>
-        <p>In this spine-chilling adventure, you will be faced with terrifying scenarios, life-threatening decisions, and gruesome monsters.</p>
-        <p>Your goal is to survive the night by making the right choices.</p>
-        <p>Are you ready to test your wits and courage in the face of unspeakable horrors?</p>
-        </div>
-        <div class="game-rules">
-            <p>1. Start the game by choosing the story.</p>
-            <p>2. Read through the text on the screen to follow the narrative.</p>
-            <p>Pay close attention to the details and descriptions, as they may contain clues to help you make the right decisions.
-            </p>
-            <p>3. At various points in the story, you will be presented with choices.</p>
-            <p>Choose wisely! Your decisions will affect the outcome of the story, including your character's survival.</p>
-            <p>To make a choice, tap the option on the screen.</p>
-            <p>4. If your character meets an unfortunate end, don't worry! You can replay the story and make different choices to see if you can survive.</p>
-            <p>Learn from your mistakes and try again.</p>
-        </div>
-    </div>
-</main>
-<!--FOOTER-->
-<footer class="footer">
-    <p>&copy; <span class="footer__copyright"></span><span class="footer__header">Haunted Choices</span></p>
-    <ul class="social-networks">
-        <li>
-          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)">
-            <i class="fa-brands fa-square-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)">
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)">
-            <i class="fa-brands fa-square-twitter"></i>
-          </a>
-        </li>
-      </ul>
+  <head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6dc5ea7d90.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta
+      name="description"
+      content="An interactive horror story game where your choices determine your fate."
+    />
+    <meta name="author" content="Haunted Choices" />
+    <meta
+      name="keywords"
+      content="horror, interactive, story, game, choices, haunted, haunted choices, hauntedchoices, hauntedchoices.com"
+    />
 
-</footer>
-</body>
+    <!-- Font Awesome and Google fonts links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kenia&family=Mukta:wght@200;400;700&family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./src/assets/images/favicons/site.webmanifest">
+
+    <!-- Browser Tab Title -->
+    <title>The Haunted Choices</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

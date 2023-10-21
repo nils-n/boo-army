@@ -1,0 +1,422 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../src/assets/images/hauntedbackground.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.visibility {
+  visibility: hidden;
+  display: none;
+}
+
+/* Navbar  */
+
+.navbar {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  z-index: 90;
+}
+.navbar a {
+  text-decoration: none;
+}
+
+/* Rules box  */
+
+.rules {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px;
+  position: relative;
+  z-index: 90;
+}
+.rule-close-btn {
+  position: absolute;
+  top: 15px;
+  font-size: 22px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+
+  right: 25px;
+}
+
+/* Burning Heading  */
+.main-block {
+  overflow: hidden;
+  position: relative;
+}
+
+.main-title {
+  font-size: 3rem;
+  background: linear-gradient(to right, #ffffff, #fafdfd, #ffffffb3);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 50px;
+  font-family: "Kenia", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Nosifer", sans-serif;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 2px 2px 4px #fafafa; 
+}
+.main-title:hover {
+  animation: glow 1.5s ease-in-out infinite;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 2px 2px 4px #ff6600;
+  }
+  50% {
+    text-shadow: 2px 2px 15px #ff6600;
+  }
+  100% {
+    text-shadow: 2px 2px 4px #ff6600;
+  }
+}
+.main-title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  color: #ff0000;
+  width: 140px;
+  height: 150px;
+  transition: all 0.5;
+  z-index: -1;
+  opacity: 0;
+}
+
+.main-title:hover::before {
+  opacity: 1;
+}
+
+/* Cards buttons  */
+.story-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.main-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+.btn {
+  text-decoration: none;
+  border: 1px solid #efc590;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px #ff0000;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #ff4d00, transparent);
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.instruction-box {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.rules-content-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game-info {
+  margin: 10px;
+}
+
+.game-info p {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.game-rules {
+  padding: 10px;
+}
+
+.game-rules p {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.play-game .btn {
+  width: 7em;
+  height: 3em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ff4d00;
+  cursor: pointer;
+}
+
+.play-game .btn:before {
+  height: 3em;
+}
+
+/* closing the instructions - x button*/
+
+.closingbtn {
+  border-radius: 10px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 0 10px;
+  font-size: 2rem;
+  background-color: #ff6600;
+  color: white;
+  cursor: pointer;
+}
+
+.play-game {
+  text-align: center;
+}
+
+/* Footer */
+
+.footer-container {
+  background-color: #0000006c;
+  transition: 0.5s;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
+  padding: 40px 20px;
+  margin: auto;
+  max-width: 1800px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left h1 {
+  font-family: "Kenia", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Nosifer", sans-serif;
+  font-size: 1.2rem;
+  color: #a00;
+  text-shadow: 2px 2px 0px #ffffff;
+  animation: glowAnimation 2s infinite;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 10px 0;
+  margin: 10px;
+}
+li {
+  list-style: none;
+}
+
+.footer-middle p {
+  font-size: 1.2rem;
+  font-family: "Handjet";
+  color: #f89952;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.footer-middle a {
+  font-size: 1.2rem;
+  color: #f89952;
+  padding: 0;
+}
+
+.footer-right h2 {
+  font-size: 1.3rem;
+  font-family: "Handjet";
+  letter-spacing: 2px;
+  text-align: center;
+  color: #a00;
+}
+.btn-pullup a {
+  color: #f89952;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.footer-right .links {
+  margin-top: 3px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-right: 1.5rem;
+}
+
+
+/* Controls */
+
+.menu {
+  display: none;
+}
+.cross {
+  display: none;
+}
+.hiding {
+  display: block;
+}
+@media (max-width: 1025px) {
+  body {
+    height: fit-content !important;
+  }
+}
+@media (max-width: 1014px) {
+  body {
+    height: 100vh !important;
+  }
+}
+@media (max-width: 732px) {
+  html {
+    font-size: 13px;
+  }
+  .menu {
+    display: block;
+    padding: 5px 0;
+  }
+  .cross {
+    display: block;
+  }
+
+  .hiding {
+    display: none;
+  }
+
+  .main-block {
+    margin-top: 40px;
+  }
+  .footer-content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 545px) {
+  body {
+    height: auto !important;
+  }
+}
+/* //////////////////////////////// */
+
+
