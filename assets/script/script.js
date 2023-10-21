@@ -26,8 +26,6 @@ soundon.innerHTML =
 }
 };
 
-// setInterval(soundonmusic, 6000);
-
 soundon.addEventListener("click", soundonmusic);
 
 // Rules //
