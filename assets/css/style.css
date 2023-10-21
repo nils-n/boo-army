@@ -206,10 +206,10 @@
   
   .play-game .btn {
   width: 7em;
-  height: 3em;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ff4d00;
+  border-radius: 10px;
   cursor: pointer;
   }
   
@@ -248,7 +248,7 @@
   }
   
   .container {
-  padding: 40px 20px;
+  padding: 20px 20px;
   margin: auto;
   max-width: 1800px;
   }
