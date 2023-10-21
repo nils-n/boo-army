@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 const Music = () => {
-  // const backgroundSound = document.querySelector(".backgroundsound");
-  // // Background Music
-  // backgroundSound.play();
+  useEffect(() => {
+    const backgroundSound = new Audio('./src/assets/music/backgroundmusic.mp3');
+    backgroundSound.loop = true;
+    backgroundSound.play();
+
+    // Clean up the audio element when the component unmounts
+    return () => {
+      backgroundSound.pause();
+    };
+  }, []);
   return (
     <div>
         {/* <!-- MUSIC --> */}
