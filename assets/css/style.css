@@ -165,7 +165,6 @@
   background-color: black;
   color: white;
   padding: 5px;
-  
   right: 25px;
   }
 
@@ -196,9 +195,9 @@
   
   .play-game .btn {
   width: 7em;
-  height: 3em;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
   color: #f89952;
   cursor: pointer;
   }
