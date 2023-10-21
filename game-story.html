@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <title>Haunted Mansion Game</title>
+</head>
+<body>
+    <div id="haunted-mansion-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                As you approach the front gate of the haunted house, the ominous silhouette of the decrepit mansion looms before you, casting long, eerie shadows in the dim moonlight. You hesitate, considering whether to turn back or continue forward. The wind carries a spine-chilling whisper, urging you to enter. Will you dare to explore the house of horrors?
+            </p>
+            <p>With resolve, you push the creaking front door open and step into the pitch-black hallway. The air is thick with the scent of decay, and the silence is deafening. Three doors stand before you, each one laden with an aura of foreboding.</p>
+            <p>Options:</p>
+            <ul>
+                <li><button id="door1-button">Door 1: The Dining Room</button></li>
+                <li><button id="door2-button">Door 2: The Basement</button></li>
+            </ul>
+        </div>
+    </div>
+    <script src="story.js"></script>
+</body>
+</html>
