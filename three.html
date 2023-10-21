@@ -73,8 +73,8 @@
         controls.minDistance = 2;
         controls.maxDistance = 5;
 
-        controls.minPolarAngle = Math.PI / 4;
-        controls.maxPolarAngle = Math.PI / 2;
+        controls.minPolarAngle = Math.PI / 4 + 0.4;
+        controls.maxPolarAngle = Math.PI / 2 - 0.2;
         controls.minAzimuthAngle = -Math.PI / 4;
         controls.maxAzimuthAngle = Math.PI / 4;
 
@@ -89,8 +89,11 @@
         controls.update();
 
         // Create floor
+        const floorTexture = textureLoader.load("./basement-floor.png");
         const floorGeometry = new THREE.BoxGeometry(6, 0.1, 6);
-        const floorMaterial = new THREE.MeshBasicMaterial({ color: 0x654321 }); // Brown color
+        const floorMaterial = new THREE.MeshBasicMaterial({
+          map: floorTexture,
+        }); // Brown color
         const floor = new THREE.Mesh(floorGeometry, floorMaterial);
         scene.add(floor);
 
@@ -100,7 +103,7 @@
         const wall3Geometry = new THREE.BoxGeometry(0.1, 2, 6);
 
         // Load wall texture
-        const wallTexture = textureLoader.load("./wall.jpeg");
+        const wallTexture = textureLoader.load("./basement-wall.jpeg");
 
         const wallMaterial = new THREE.MeshBasicMaterial({
           map: wallTexture,
