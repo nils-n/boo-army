@@ -175,9 +175,9 @@ How to Fork and Clone the Repository:
 
 We employed W3C for HTML validation across all pages of the website, and it was equally instrumental in validating our CSS.
 
-* [HTML](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/w3c-validator.png)
+* ![HTML](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/w3c-validator.png)
 
-* [style.css](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/jigsaw-css-main.png)
+* ![style.css](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/jigsaw-css-main.png)
 
 
 ### Jslint Validator 
