@@ -2,6 +2,8 @@
 
 Welcome to the Haunted Choices web application, developed for the Code Institute's October Hackathon. Get ready to immerse yourself in the world of spooky tales and interactive narratives. This web application features one horror story available and another two upcoming each with multiple choices and chilling consequences. Explore the eerie, Halloween-themed design while you navigate through terrifying narratives.
 
+Feel free to access the [live website](https://nils-n.github.io/boo-army/) (CTRL + Click to open in a new tab).
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -32,10 +34,20 @@ This web application was developed using the following technologies:
 - **HTML**: Used for structuring the content of the web pages.
 - **CSS**: Used to style the web pages with a Halloween-themed color palette and design.
 - **JavaScript**: Implemented for interactivity, allowing users to make choices that affect the story's progression.
+- **ThreeJS**: Used to render the 3D Horror house.
 
 ## Deployment
 
-TBD
+ - The live website was deployed to GitHub pages. The steps to deploy are as follows: 
+  
+    1. Log in to GitHub
+    2. In your Repository section, select the project repository that you want to deploy
+    3. In the menu located at the top of this section, click `Settings`
+    4. Select `Pages` on the left-hand menu - this is around halfway down
+    5. In the source section, select branch `Main` and save
+    6. The page is then given a site URL which you will see above the source section.
+
+Please note it can take a while for this link to become fully active. 
 
 ## How to Use
 
