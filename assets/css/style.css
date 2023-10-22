@@ -152,6 +152,11 @@
   color: white;
   padding: 5px;
   right: 25px;
+  cursor: pointer;
+  }
+
+  .rule-close-btn:hover {
+    background-color: #ff4d00;
   }
 
   .rules-content-title {
