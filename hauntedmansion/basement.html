@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Haunted Room</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #dialog-container {
+        position: absolute;
+        top: 50%; /* Set the top position to 50% of the screen height */
+        left: 50%; /* Set the left position to 50% of the screen width */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* Move the element up and left by 50% of its own width and height */
+        text-align: center; /* Center the text horizontally */
+        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1; /* Ensure it's above the canvas */
+      }
+
+      #buttons {
+        margin-bottom: 10px;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-985ae730.js"></script>
+  </head>
+  <body>
+    <!-- UI Container for buttons and messages -->
+    <div id="dialog-container">
+      <p>This is a centered dialog message.</p>
+      <button id="close-button">Close</button>
+    </div>
+  </body>
+</html>

@@ -11,10 +11,10 @@
   background-position: center;
   background-repeat: repeat;
   display: flex;
-  gap: 30px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
   }
   
   .visibility {
@@ -23,12 +23,11 @@
   
   /* Navbar */
   
-  .navbar {
-  position: absolute;
-  top: 35px;
-  right: 65px;
-  z-index: 5;
+  .navbar-items {
+    margin-top: 20px;
+    display: flex;
   }
+
   .navbar a {
   margin: 5px 10px;
   padding: 0;
@@ -74,7 +73,7 @@
   color: transparent;
   text-transform: uppercase;
   text-align: center;
-  padding: 50px;
+  padding: 5px;
   font-family: "Kenia", sans-serif;
   font-family: "Mukta", sans-serif;
   font-family: "Nosifer", sans-serif;
@@ -305,6 +304,7 @@
   color: #f89952;
   position: relative;
   z-index: 5;
+  cursor: pointer;
   }
   
   .footer-right .links {
