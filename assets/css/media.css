@@ -8,19 +8,84 @@
   display: block;
 }
 @media (max-width: 1025px) {
-  body {
-    height: fit-content !important;
+  footer {
+    position: static !important;
+    bottom: 0;
   }
 }
 @media (max-width: 1014px) {
-  body {
-    height: 100vh !important;
+  html {
+    font-size: 14px;
+  }
+  footer {
+    position: absolute !important;
+    bottom: 0;
   }
 }
+
+/* //////////////////////////////// */
+/* Media Queries */
+@media (max-width: 940px) {
+  .btn-pullup a {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .footer-container {
+    background-color: #ffffffc7;
+    transition: 0.5s;
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .footer-container {
+    display: block !important;
+  }
+}
+
+@media (max-width: 822px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-container {
+    width: 100%;
+  }
+
+  .story-buttons {
+    margin-top: 0px !important;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-container {
+    background-color: #ffffffc7;
+    transition: 0.5s;
+    margin-top: 80px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media (max-width: 732px) {
   html {
     font-size: 13px;
   }
+  body {
+    overflow: visible;
+    height: 100% !important;
+  }
+
   .menu {
     display: block;
     padding: 5px 0;
@@ -36,23 +101,16 @@
   .main-block {
     margin-top: 40px;
   }
-  .footer-content {
-    justify-content: center;
-    align-items: center;
+  .container {
+    padding: 20px !important;
   }
-}
-@media (max-width: 545px) {
-  body {
-    height: auto !important;
-  }
-}
 
-@media (max-width: 732px) {
-  .navbar {
-      position: absolute;
-      top: 35px;
-      right: 65px;
-      z-index: 5;
-    }
+  /* for main btns */
+  .story-buttons .btn {
+    width: 300px !important;
+  }
+  footer {
+    padding-top: 80px;
+    position: static !important;
+  }
 }
-/* //////////////////////////////// */
