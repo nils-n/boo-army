@@ -2,6 +2,8 @@
 
 Welcome to the Haunted Choices web application, developed Team Boo Army for the Code Institute's October Hackathon. Get ready to immerse yourself in the world of spooky tales and interactive narratives. This web application features one horror story available and another two upcoming each with multiple choices and chilling consequences. Explore the eerie, Halloween-themed design while you navigate through terrifying narratives.
 
+Feel free to access the [live website](https://nils-n.github.io/boo-army/) (CTRL + Click to open in a new tab).
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -63,6 +65,7 @@ This web application was developed using the following technologies:
 - **HTML**: Used for structuring the content of the web pages.
 - **CSS**: Used to style the web pages with a Halloween-themed color palette and design.
 - **JavaScript**: Implemented for interactivity, allowing users to make choices that affect the story's progression.
+- **ThreeJS**: Used to render the 3D Horror house.
 
 ### Frameworks, Libraries & Programs Used
 The project also utilizes the following frameworks, libraries, and programs:

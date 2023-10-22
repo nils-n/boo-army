@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/story.css">
+
+    <title>Haunted Mansion Game</title>
+</head>
+<body>
+    <div id="haunted-mansion-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                As you approach the front gate of the haunted house, the ominous silhouette of the decrepit mansion looms before you, casting long, eerie shadows in the dim moonlight. You hesitate, considering whether to turn back or continue forward. The wind carries a spine-chilling whisper, urging you to enter. Will you dare to explore the house of horrors?
+            </p>
+            <p>With resolve, you push the creaking front door open and step into the pitch-black hallway. The air is thick with the scent of decay, and the silence is deafening. Three doors stand before you, each one laden with an aura of foreboding.</p>
+            <p>Options:</p>
+            <ul>
+                <li><button id="door1-button">Door 1: The Dining Room</button></li>
+                <li><button id="door2-button">Door 2: The Basement</button></li>
+            </ul>
+        </div>
+    </div>
+    <div id="basement-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                You open the door to the dark, foreboding basement. As you descend the creaky stairs, you hear shuffling and moaning in the shadows. It's too late to turn back now; you've ventured too far. Suddenly, a group of ravenous zombies emerges from the darkness and devours you, your screams echoing in the basement's depths.
+            </p>
+            <p>Your choices have led to a gruesome end.</p>
+            <p>The End.</p>
+        </div>
+    </div>
+    <div id="dining-room-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                You open the door to the Dining Room, which is adorned with dusty, antique furniture and an imposing chandelier. The room is eerily quiet, but you notice a faint glimmer of light coming from the kitchen at the far end. You decide to explore the Dining Room further.
+            </p>
+            <p>
+                Inside, you find a long, ornate dining table, set with tarnished silverware and covered in cobwebs. The room has an eerie, forgotten beauty to it, and as you approach the table, you notice a tattered note.
+            </p>
+            <p>
+                With a sense of trepidation, you pick up the note and read the shaky handwriting:
+            </p>
+            <p>
+                "Beware the cursed silverware."
+            </p>
+            <p>
+                Curiosity piqued, you continue to investigate the room. Suddenly, the silverware on the table starts to rattle and rise into the air, swirling around you. The forks and knives become sharp, gleaming weapons, and they advance menacingly.
+            </p>
+            <p>
+                You must make a quick decision to survive:
+            </p>
+            <p>Choose wisely:</p>
+            <ul>
+                <li><button id="run-button">1. If you decide to make a run for the door</button></li>
+                <li><button id="defend-button">2. If you search for an object to defend yourself</button></li>
+                <li><button id="reason-button">3. If you try to reason with the possessed silverware</button></li>
+            </ul>
+        </div>
+    </div>
+    <div id="escape-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                Overwhelmed by the malevolent presence of the possessed silverware, you decide to make a run for it. You bolt toward the door that leads to the backyard, narrowly avoiding the flying utensils.
+            </p>
+            <p>
+                You burst through the door and find yourself in a moonlit garden, gasping for breath. You run as far away from the haunted house as you can, and the moment you cross the property's threshold, a bone-chilling wail emanates from within.
+            </p>
+            <p>
+                You've escaped the horrors of the haunted house. Though you may forever be haunted by your ordeal, you've survived the night.
+            </p>
+            <p>Congratulations! You've made it to safety.</p>
+            <p>The End.</p>
+        </div>
+    </div>
+    <div id="defend-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                You quickly scan the kitchen for a means of defense and spot a heavy cast-iron skillet hanging on the wall. With adrenaline pumping, you grab the skillet and wield it as a makeshift shield.
+            </p>
+            <p>
+                As the cursed silverware continues its assault, you swing the skillet to deflect their sharp edges. The forks and knives clatter to the floor, unable to pierce your improvised protection.
+            </p>
+            <p>
+                Seizing the moment, you dash back into the Hallway and slam the door behind you, leaving the malevolent silverware behind.
+            </p>
+            <p>You realize that you're still not safe. You must decide where to go next:</p>
+            <ul>
+                <li><button id="basement-button">1. Go into the Basement</button></li>
+            </ul>
+        </div>
+    </div>
+    <div id="reason-modal" class="modal">
+        <div class="modal-content">
+            <p>
+                In a desperate attempt to avoid violence, you raise your hands and try to reason with the possessed silverware. "Please, calm down. I mean you no harm," you implore.
+            </p>
+            <p>
+                To your surprise, the silverware's chaotic dance slows, and the pieces hover in mid-air, as if considering your plea. They gradually lower to the table, lying still once more.
+            </p>
+            <p>
+                With the silverware no longer a threat, you breathe a sigh of relief. But you can't shake the sense that danger still lurks in this house. You must decide where to go next:
+            </p>
+            <ul>
+                <li><button id="reasonToBasementButton">1. Go into the Basement</button></li>
+            </ul>
+        </div>
+    </div>
+    <script src="assets/script/story.js"></script>
+</body>
+</html>

@@ -49,6 +49,7 @@
   position: relative;
   overflow: hidden;
   text-shadow: 2px 2px 4px #fafafa;
+  cursor: default;
   }
   .main-title:hover,
   .navbar a:hover {
