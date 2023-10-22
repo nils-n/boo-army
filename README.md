@@ -45,56 +45,76 @@ As a user I would like:
 
 ### Design
 
+### Colour Palette
+
+The colour palette is dark and spooky for an eerie atmosphere. The main colours are black, white, red. As well as, two shades of orange which are inspired by the colour of pumpkin.
+
+![colour-palette](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/colour-palette.png)
+
+
 ### Typography
 
 The fonts employed for this website include Nosifer from Google Fonts and a sans-serif typeface. Nosifer was specifically chosen for the main title due to its unique and edgy design. This font boasts angular, jagged characteristics that give it a modern and striking appearance. With its somewhat ominous vibe, it's particularly suitable for Halloween-themed text.
 
-![Nosifer]()
+![Nosifer](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/nosifer-fonts.png)
 
 
 ### Imagery
 
 The images featured in this project were generated using the Leonardo.ai app. 
 
-![background1]()
+![background1](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/background1.jpg)
 
-![background2]()
+![background2](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/background2.jpg)
 
 Additionally, the rooms were created using three.js.
+
 
 ### Wireframes
 
 During the planning stage, we utilized Balsamiq for crafting our wireframes.
 
-* ![Main page]()
+* ![Main page](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/wireframes/main-page.png)
 
-* ![The story]()
 
-* ![The dining room]()
+* ![The story](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/wireframes/mansion.png)
 
-* ![The basement]()
+
+* ![The dining room](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/wireframes/dining%20room.png)
+
+
+* ![The basement](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/wireframes/basement.png)
+
 
 ## Features
 
 * Three Distinct Horror Stories: Dive into three spine-tingling narratives, each with its own unique storyline, characters, and choices. One is available and other two are upcoming, so stay tuned.
 
-![main1]()
-![main2]()
+![main1](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/main1.png)
+
+![main2](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/main2.png)
+
 
 * Interactive Choices: At key points in each story, you will be presented with choices that impact the direction of the plot.
 
-![cselection]()
+![selection](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/selection.png)
+
 
 * Halloween-Themed Design: Immerse yourself in the Halloween spirit with a dark and eerie colour palette, hover effects, spooky visuals, and atmospheric design.
-![hover-effect]()
+
+![hover-effect](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/hover-effect.png)
+
 
 * Engaging User Experience: Enjoy a captivating and suspenseful user experience that keeps you on the edge of your seat with sounds and music and button to control it.
 
-![music-btn]()
+![music-btn](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/music-btn.png)
 
 * Interactive Storytelling: Users can navigate through a series of choices that lead them to different parts of the house. Each choice leads to an action.
-![dining]()
-![basement]()
+
+![dining](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/dining-room.png)
+
+![basement](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/basement.png)
+
 
 ## Technologies Used
 
@@ -109,16 +129,17 @@ This web application was developed using the following technologies:
 ### Frameworks, Libraries & Programs Used
 The project also utilizes the following frameworks, libraries, and programs:
 
-* Git: 
-* Github: 
+* Git: for version control
+* Github: to save code
 * Balsamiq: to create the wireframes for the website.
 * Favicon.io: to generate the tab icon.
+* Google Fonts: used to import fonts into the webpage.
 * Am I Responsive: to check if the website is responsive for various devices and screen sizes.
-* Google Fonts: for the page title
-* Three.js
-* Vite React
-* FigJam
-* Pixabay
+* Coolors: to create the colour palette
+* Three.js: to create and build the rooms.
+* Vite React: for the build of optimized assets for production
+* FigJam: to create brainstorm ideas in real-time.
+* Pixabay: for the royalty-free music and sound effects
 
 
 ## Deployment & Local Development
@@ -156,7 +177,7 @@ We employed W3C for HTML validation across all pages of the website, and it was 
 
 * [HTML](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/w3c-validator.png)
 
-* [style.css]()
+* [style.css](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/jigsaw-css-main.png)
 
 
 ### Jslint Validator 
