@@ -46,4 +46,13 @@
     height: auto !important;
   }
 }
+
+@media (max-width: 732px) {
+  .navbar {
+      position: absolute;
+      top: 35px;
+      right: 65px;
+      z-index: 5;
+    }
+}
 /* //////////////////////////////// */
