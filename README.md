@@ -5,13 +5,14 @@ Welcome to the Haunted Choices web application, developed Team Boo Army for the 
 ## Table of Contents
 
 1. [Introduction](#introduction)
-5. [How to Use](#how-to-use)
-2. [User Experience](#user-experience)
-3. [Features](#features)
-4. [Technologies Used](#technologies-used)
-5. [Deployment & Local Development](#deployment)
-6. [Credits](credits)
-8. [License](#license)
+2. [How to Use](#how-to-use)
+3. [User Experience](#user-experience)
+4. [Features](#features)
+5. [Technologies Used](#technologies-used)
+6. [Deployment & Local Development](#deployment--local-development)
+7. [Testing](#testing)
+8. [Credits](credits)
+
 
 ## Introduction
 
@@ -19,10 +20,10 @@ Haunted Choices is a web application designed to provide an immersive and spine-
 
 ## How to Use
 
-1. Choose a horror story to start your eerie adventure.
-2. As you progress through the story, you will be presented with choices.
-3. Click on the choices to determine the fate of the characters and the outcome of the story.
-4. Enjoy the suspense and thrill of Halloween Horror Stories!
+* Choose a horror story to start your eerie adventure.
+* As you progress through the story, you will be presented with choices.
+* Click on the choices to determine the fate of the characters and the outcome of the story.
+* Enjoy the suspense and thrill of Halloween Horror Stories!
 
 ## User Experience
 
@@ -30,29 +31,70 @@ Haunted Choices is a web application designed to provide an immersive and spine-
 
 As a user I would like: 
 
-* 
-* 
-* 
-* 
-* 
-* 
+* Use click on the story to start.
+
+* Understand how to use the website immediately so that I can enjoy a quick and seamless user experience.
+
+* See options to progress the story at each room so I can move through the haunted house.
+
+* Easily access a "Start Over" button to restart the game.
+
+* See visually appealing illustrations/animation and sounds so that the adventure feels more engaging.
+
+* Interact with elements on the website such as buttons for multiple choices and can navigate to the next room or perform an action to ensure my survival in the game.
 
 ### Design
 
 ### Typography
 
+The fonts employed for this website include Nosifer from Google Fonts and a sans-serif typeface. Nosifer was specifically chosen for the main title due to its unique and edgy design. This font boasts angular, jagged characteristics that give it a modern and striking appearance. With its somewhat ominous vibe, it's particularly suitable for Halloween-themed text.
+
+![Nosifer]()
+
 
 ### Imagery
 
+The images featured in this project were generated using the Leonardo.ai app. 
+
+![background1]()
+
+![background2]()
+
+Additionally, the rooms were created using three.js.
+
 ### Wireframes
+
+During the planning stage, we utilized Balsamiq for crafting our wireframes.
+
+* ![Main page]()
+
+* ![The story]()
+
+* ![The dining room]()
+
+* ![The basement]()
 
 ## Features
 
-- **Three Distinct Horror Stories**: Dive into three spine-tingling narratives, each with its own unique storyline, characters, and choices. One is available and another two upcoming, so stay tuned.
-- **Interactive Choices**: At key points in each story, you will be presented with choices that impact the direction of the plot.
-- **Halloween-Themed Design**: Immerse yourself in the Halloween spirit with a dark and eerie color palette, spooky visuals, and atmospheric design.
-- **Responsive Web Design**: The application is designed to work on various devices and screen sizes.
-- **Engaging User Experience**: Enjoy a captivating and suspenseful user experience that keeps you on the edge of your seat.
+* Three Distinct Horror Stories: Dive into three spine-tingling narratives, each with its own unique storyline, characters, and choices. One is available and other two are upcoming, so stay tuned.
+
+![main1]()
+![main2]()
+
+* Interactive Choices: At key points in each story, you will be presented with choices that impact the direction of the plot.
+
+![cselection]()
+
+* Halloween-Themed Design: Immerse yourself in the Halloween spirit with a dark and eerie colour palette, hover effects, spooky visuals, and atmospheric design.
+![hover-effect]()
+
+* Engaging User Experience: Enjoy a captivating and suspenseful user experience that keeps you on the edge of your seat with sounds and music and button to control it.
+
+![music-btn]()
+
+* Interactive Storytelling: Users can navigate through a series of choices that lead them to different parts of the house. Each choice leads to an action.
+![dining]()
+![basement]()
 
 ## Technologies Used
 
@@ -60,23 +102,23 @@ As a user I would like:
 
 This web application was developed using the following technologies:
 
-- **HTML**: Used for structuring the content of the web pages.
-- **CSS**: Used to style the web pages with a Halloween-themed color palette and design.
-- **JavaScript**: Implemented for interactivity, allowing users to make choices that affect the story's progression.
+* HTML: Used for structuring the content of the web pages.
+* CSS: Used to style the web pages with a Halloween-themed color palette and design.
+* JavaScript: Implemented for interactivity, allowing users to make choices that affect the story's progression.
 
 ### Frameworks, Libraries & Programs Used
 The project also utilizes the following frameworks, libraries, and programs:
 
-* [Git] 
-* [Github]
-* [Balsamiq]
-* [Favicon.io]
-* [Am I Responsive]
-* [Google Fonts]
-* [Three.js]
-* [Vite React]
-* [FigJam]
-* [Pixabay]
+* Git: 
+* Github: 
+* Balsamiq: to create the wireframes for the website.
+* Favicon.io: to generate the tab icon.
+* Am I Responsive: to check if the website is responsive for various devices and screen sizes.
+* Google Fonts: for the page title
+* Three.js
+* Vite React
+* FigJam
+* Pixabay
 
 
 ## Deployment & Local Development
@@ -85,45 +127,44 @@ The project also utilizes the following frameworks, libraries, and programs:
 
 To deploy the site using GitHub Pages, follow these steps:
 
-- Log in to GitHub (or sign up if you don't have an account).
-- Navigate to the repository associated with this project.
-- Click on the "Settings" button.
-- In the left-hand navigation menu, select "Pages."
-- From the source dropdown, choose the main branch and click "Save."
-- The site will be deployed, but please keep in mind that it might take a few minutes for the site to go live.
+* Log in to GitHub (or sign up if you don't have an account).
+* Navigate to the repository associated with this project.
+* Click on the "Settings" button.
+* In the left-hand navigation menu, select "Pages."
+* From the source dropdown, choose the main branch and click "Save."
+* The site will be deployed, but please keep in mind that it might take a few minutes for the site to go live.
 
 ### Local Development
 
 How to Fork and Clone the Repository:
 
-- We have created a wiki page in the repository that provides detailed instructions on how to fork and clone the project. You can view the wiki page by clicking [here](link to the wiki page).
+* We have created a wiki page in the repository that provides detailed instructions on how to fork and clone the project. You can view the wiki page by clicking [here](https://github.com/nils-n/boo-army/wiki).
 
 
 ## Testing
 
-- Testing was a continuous process throughout the entire construction phase. We harnessed the power of Chrome Developer Tools as we built, using them to identify and resolve any issues that cropped up.
+* Testing was a continuous process throughout the entire construction phase. We harnessed the power of Chrome Developer Tools as we built, using them to identify and resolve any issues that cropped up.
 
-- Throughout development, we relied on Google Developer Tools to validate the functionality of our project and to aid in diagnosing problems when things didn't behave as anticipated.
+* Throughout development, we relied on Google Developer Tools to validate the functionality of our project and to aid in diagnosing problems when things didn't behave as anticipated.
 
-- We made extensive use of the developer tools' console to systematically examine and verify the performance of specific JavaScript sections, as well as to diagnose and rectify any issues that arose along the way.
+* We made extensive use of the developer tools' console to systematically examine and verify the performance of specific JavaScript sections, as well as to diagnose and rectify any issues that arose along the way.
 
 
 ### V3C Validator
 
 We employed W3C for HTML validation across all pages of the website, and it was equally instrumental in validating our CSS.
 
-- [index.html]()
-- [style.css]()
-- []()
-- []()
-- []()
+* [HTML](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/w3c-validator.png)
 
-### Jshint Validator 
+* [style.css]()
 
-- [Script.js]()
-- []()
-- []()
-- []()
+
+### Jslint Validator 
+
+* JSLint showed no erroes, but few warnings about things that are not necessarily wrong in the application. 
+
+* Due to time constraints, there wasn't an opportunity to address and rectify these code warnings. However, this is a task we plan to tackle in the future.
+
 
 ## Credits 
 
@@ -131,10 +172,10 @@ We employed W3C for HTML validation across all pages of the website, and it was 
 
 We welcome contributions to improve and expand the Halloween Horror Stories web application. If you have any suggestions, bug fixes, or new features to add, please follow these steps:
 
-1. Fork the repository on GitHub.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and test them thoroughly.
-4. Submit a pull request to the main repository with a clear description of your changes.
+* Fork the repository on GitHub.
+* Create a new branch for your feature or bug fix.
+* Make your changes and test them thoroughly.
+* Submit a pull request to the main repository with a clear description of your changes.
 
 ### Media and code Used
 
@@ -154,11 +195,11 @@ We welcome contributions to improve and expand the Halloween Horror Stories web 
 
 ### Meet the Boo Army Team (Alphabetical Order)
 
-* [Alex]()
-* [Barry]()
-* [Bruno]()
-* [Nils]()
-* [Zainab]()
+* [Aleksandra Suchojad](https://www.linkedin.com/in/aleksandra-suchojad/)
+* [Barry Cunningham](https://www.linkedin.com/in/barry-cunningham-0858016789/)
+* [Bruno Diego da Silva](https://www.linkedin.com/in/bruno-diego-da-silva-151027192/)
+* [Nils Nothnagel](http://www.linkedin.com/in/nilsnothnagel)
+* [Zainab Ismail](https://www.linkedin.com/in/zainab-ismail-dev/)
 
 ---
 
