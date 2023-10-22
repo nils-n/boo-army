@@ -1,39 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Haunted Room</title>
-    <style>
-      body {
-        margin: 0;
-      }
 
-      #dialog-container {
-        position: absolute;
-        top: 50%; /* Set the top position to 50% of the screen height */
-        left: 50%; /* Set the left position to 50% of the screen width */
-        transform: translate(
-          -50%,
-          -50%
-        ); /* Move the element up and left by 50% of its own width and height */
-        text-align: center; /* Center the text horizontally */
-        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-        padding: 20px;
-        border-radius: 10px;
-        z-index: 1; /* Ensure it's above the canvas */
-      }
+<head>
+  <meta charset="utf-8" />
+  <title>Haunted House</title>
 
-      #buttons {
-        margin-bottom: 10px;
-      }
-    </style>
-    <script type="module" crossorigin src="./assets/index-ef5f0d6f.js"></script>
-  </head>
-  <body>
-    <!-- UI Container for buttons and messages -->
-    <div id="dialog-container">
-      <p>This is a centered dialog message.</p>
-      <button id="close-button">Close</button>
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background: url(../assets/images/gate.jpg);
+    }
+
+    #dialog-container {
+      position: absolute;
+      top: 50%;
+      /* Set the top position to 50% of the screen height */
+      left: 50%;
+      /* Set the left position to 50% of the screen width */
+      transform: translate(-50%,
+          -50%);
+      /* Move the element up and left by 50% of its own width and height */
+      text-align: center;
+      /* Center the text horizontally */
+      background: rgba(255, 255, 255, 0.7);
+      /* Semi-transparent background */
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 1;
+      /* Ensure it's above the canvas */
+    }
+
+    #buttons {
+      margin-bottom: 10px;
+    }
+
+    .message {
+      opacity: 0;
+      animation: fadeIn 5s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- UI Container for buttons and messages -->
+  <div class="main-block">
+    <h1 class="main-title">The Haunted Mansion</h1>
+  </div>
+  <div id="dialog-container">
+    <div class="message">
+      <p>
+        As you approach the front gate of the haunted house, the ominous silhouette of the decrepit mansion looms before
+        you, casting long, eerie shadows in the dim moonlight. You hesitate, considering whether to turn back or continue
+        forward. The wind carries a spine-chilling whisper, urging you to enter. Will you dare to explore the house of
+        horrors?
+      </p>
+      <p>
+        With resolve, you push the creaking front door open and step into the pitch-black hallway. The air is thick with
+        the scent of decay, and the silence is deafening. Three doors stand before you, each one laden with an aura of
+        foreboding.
+      </p>
+      <p>
+        Options:
+        <br>
+        <a href="./dining.html" class="btn btn-click-sound">Door 1: The Dining Room</a>
+        <br>
+        <a href="./basement.html" class="btn btn-click-sound">Door 2: The Basement</a>
+      </p>
     </div>
-  </body>
+  </div>
+  <!-- MUSIC -->
+  <audio class="backgroundsound" loop autoplay>
+    <source src="../assets/music/backgroundmusic.mp3" />
+  </audio>
+  <audio class="btn-sound" src="../assets/music/btnsound.mp3"></audio>
+
+  <!-- JavaScript File -->
+  <!-- <script src="../assets/script/script.js"></script> -->
+  <script>
+    const clickSoundBtns = document.querySelectorAll(".btn-click-sound");
+    const btnSound = document.querySelector(".btn-sound");
+    // Making sound effect for all btns
+    clickSoundBtns.forEach((allbtns) =>
+        allbtns.addEventListener("click", () => btnSound.play())
+    );
+  </script>
+</body>
+
 </html>
