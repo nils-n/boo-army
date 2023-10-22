@@ -32,8 +32,59 @@
   <body>
     <!-- UI Container for buttons and messages -->
     <div id="dialog-container">
-      <p>This is a centered dialog message.</p>
-      <button id="close-button">Close</button>
+      <p style="max-width: 60ch; line-height: 1.6" id="dining-dialog-header">
+        You stand before an empty hallway, devoid of life and illuminated only
+        by a dim, flickering light above. Three foreboding doors line the
+        corridor, each seemingly whispering tales of the unknown. The air is
+        heavy with an unsettling silence, and you can't shake the feeling of
+        being watched. You decide to explore the hallway further, and the
+        choices you face are:
+      </p>
+      <div>
+        <button
+          type="button"
+          class="btn btn-light py-2 my-2"
+          id="dining-option-1"
+        >
+          Open the door on the left.
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-light py-2 my-2"
+          id="dining-option-2"
+        >
+          Proceed through the middle door.
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-light py-2 my-2"
+          id="dining-option-3"
+        >
+          Venture to the door on the right.
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-light py-2 my-2 d-none"
+          id="dining-end-game"
+        >
+          Start Again.
+        </button>
+      </div>
     </div>
+    <!--Load bootstrap for quick styling of buttons  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript File -->
+    <script src="./assets/dialog-dining.js"></script>
   </body>
 </html>
