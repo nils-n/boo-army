@@ -6,78 +6,80 @@
   }
   .hiding {
   display: block;
-  }
-  @media (max-width: 1025px) {
+
+}
+@media (max-width: 1025px) {
   footer {
-  position: static !important;
-  bottom: 0;
+    position: static !important;
+    bottom: 0;
   }
-  }
-  @media (max-width: 1014px) {
+}
+@media (max-width: 1014px) {
   html {
-  font-size: 14px;
+    font-size: 14px;
   }
   footer {
-  position: absolute !important;
-  bottom: 0;
+    position: absolute !important;
+    bottom: 0;
   }
-  }
-  
-  /* //////////////////////////////// */
-  /* Media Queries */
-  @media (max-width: 940px) {
+}
+
+/* //////////////////////////////// */
+/* Media Queries */
+@media (max-width: 940px) {
   .btn-pullup a {
-  display: none;
+    display: none;
   }
-  }
-  
-  @media (max-width: 920px) {
+}
+
+@media (max-width: 920px) {
   .footer-container {
-  background-color: #ffffffc7;
-  transition: 0.5s;
-  margin-top: 80px;
-  width: 100%;
+    background-color: #ffffffc7;
+    transition: 0.5s;
+    margin-top: 80px;
+    width: 100%;
   }
-  
+
   .footer-container {
-  display: block !important;
+    display: block !important;
   }
-  }
-  
-  @media (max-width: 822px) {
+}
+
+@media (max-width: 822px) {
   .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
   }
   .footer-container {
-  width: 100%;
+    width: 100%;
   }
-  
+
   .story-buttons {
-  margin-top: 0px !important;
-  gap: 5px;
+    margin-top: 0px !important;
+    gap: 5px;
   }
-  }
-  
-  @media (max-width: 760px) {
+}
+
+@media (max-width: 760px) {
   .footer-container {
-  background-color: #ffffffc7;
-  transition: 0.5s;
-  margin-top: 80px;
+    background-color: #ffffffc7;
+    transition: 0.5s;
+    margin-top: 80px;
   }
   .footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
   }
-  }
-  
-  @media (max-width: 732px) {
+}
+
+@media (max-width: 732px) {
+
   html {
   font-size: 13px;
   }
@@ -85,7 +87,12 @@
   overflow: visible;
   height: 100% !important;
   }
-  
+
+  body {
+    overflow: visible;
+    height: 100% !important;
+  }
+
   .menu {
   display: block;
   padding: 5px 0;
@@ -113,5 +120,18 @@
   padding-top: 80px;
   position: static !important;
   }
+
+  .container {
+    padding: 20px !important;
   }
-/* //////////////////////////////// */
+
+  /* for main btns */
+  .story-buttons .btn {
+    width: 300px !important;
+  }
+  footer {
+    padding-top: 80px;
+    position: static !important;
+  }
+}
+

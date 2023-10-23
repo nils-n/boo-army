@@ -1,97 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+      <!-- META TAGS -->
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script
+        src="https://kit.fontawesome.com/6dc5ea7d90.js"
+        crossorigin="anonymous"
+      ></script>
+      <meta
+        name="description"
+        content="An interactive horror story game where your choices determine your fate."
+      />
+      <meta name="author" content="Haunted Choices" />
+      <meta
+        name="keywords"
+        content="horror, interactive, story, game, choices, haunted, haunted choices, hauntedchoices, hauntedchoices.com"
+      />
+  
+      <!-- Font Awesome and Google fonts links -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      />
+      <link rel="stylesheet" href="./assets/css/media.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Kenia&family=Mukta:wght@200;400;700&family=Nosifer&display=swap"
+        rel="stylesheet"
+      />
+    <!-- Favicons-->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Haunted House</title>
+    <!-- Browser Tab Title -->
+    <title>The Haunted Choices</title>
 
-  <!-- CSS FILES -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        background: url(../assets/images/gate.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        display: block;
+      }
 
-  <style>
-    body {
-      margin: 0;
-      background: url(../assets/images/gate.jpg);
-    }
+      #dialog-container {
+        /* Set the left position to 50% of the screen width */
+        margin: 0 20px;
+        /* Move the element up and left by 50% of its own width and height */
+        text-align: center;
+        /* Center the text horizontally */
+        background: transparent;
+        /* Semi-transparent background */
+        padding: 40px 20px;
+        border-radius: 10px;
+        z-index: 1;
+        /* Ensure it's above the canvas */
+        backdrop-filter: blur(20px);
+      }
+      .dialog-main {
+        max-width: 900px;
+        margin: auto;
+      }
+      #buttons {
+        margin-bottom: 10px;
+      }
 
-    #dialog-container {
-      position: absolute;
-      top: 50%;
-      /* Set the top position to 50% of the screen height */
-      left: 50%;
-      /* Set the left position to 50% of the screen width */
-      transform: translate(-50%,
-          -50%);
-      /* Move the element up and left by 50% of its own width and height */
-      text-align: center;
-      /* Center the text horizontally */
-      background: rgba(255, 255, 255, 0.7);
-      /* Semi-transparent background */
-      padding: 20px;
-      border-radius: 10px;
-      z-index: 1;
-      /* Ensure it's above the canvas */
-    }
+      .message {
+        opacity: 0;
+        animation: fadeIn 5s forwards;
+      }
+      .message p {
+        color: white;
+        font-size: 1.6rem;
+        line-height: 1.4;
+      }
 
-    #buttons {
-      margin-bottom: 10px;
-    }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .message .btn {
+        color: rgb(255, 255, 255);
+        max-width: 480px;
+        padding: 20px;
+      }
+      .message span {
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+      .main-title {
+        margin: 30px 0;
+      }
+      .message p {
+        margin: 20px 0;
+      }
 
-    .message {
-      opacity: 0;
-      animation: fadeIn 5s forwards;
-    }
+      @media (max-width: 720px) {
+        html {
+          font-size: 12px;
+        }
+        .message .btn {
+          max-width: 300px;
+        }
+      }
+      @media (max-width: 400px) {
+        html {
+          font-size: 12px;
+        }
+        .message .btn {
+          max-width: 200px;
+        }
+        .message p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
 
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-  </style>
-</head>
-
-<body>
-  <!-- UI Container for buttons and messages -->
-  <div class="main-block">
-    <h1 class="main-title">The Haunted Mansion</h1>
-  </div>
-  <div id="dialog-container">
-    <div class="message">
-      <p>
-        As you approach the front gate of the haunted house, the ominous silhouette of the decrepit mansion looms before
-        you, casting long, eerie shadows in the dim moonlight. You hesitate, considering whether to turn back or continue
-        forward. The wind carries a spine-chilling whisper, urging you to enter. Will you dare to explore the house of
-        horrors?
-      </p>
-      <p>
-        With resolve, you push the creaking front door open and step into the pitch-black hallway. The air is thick with
-        the scent of decay, and the silence is deafening. Three doors stand before you, each one laden with an aura of
-        foreboding.
-      </p>
-      <p>
-        Options:
-        <br>
-        <a href="./dining.html" class="btn btn-click-sound">Door 1: The Dining Room</a>
-        <br>
-        <a href="./basement.html" class="btn btn-click-sound">Door 2: The Basement</a>
-      </p>
+  <body>
+    <!-- UI Container for buttons and messages -->
+    <div class="main-block">
+      <h1 class="main-title">The Haunted Mansion</h1>
     </div>
-  </div>
-  <!-- MUSIC -->
-  <audio class="backgroundsound" loop autoplay>
-    <source src="../assets/music/backgroundmusic.mp3" />
-  </audio>
-  <audio class="btn-sound" src="../assets/music/btnsound.mp3"></audio>
+    <div class="dialog-main">
+      <div id="dialog-container">
+        <div class="message">
+          <p>
+            As you approach the front gate of the haunted house, the ominous
+            silhouette of the decrepit mansion looms before you, casting long,
+            eerie shadows in the dim moonlight. You hesitate, considering
+            whether to turn back or continue forward. The wind carries a
+            spine-chilling whisper, urging you to enter. Will you dare to
+            explore the house of horrors?
+          </p>
+          <p>
+            With resolve, you push the creaking front door open and step into
+            the pitch-black hallway. The air is thick with the scent of decay,
+            and the silence is deafening. Three doors stand before you, each one
+            laden with an aura of foreboding.
+          </p>
+          <p>
+            <span> Options:</span>
+            <br />
+            <a href="#" id="sound-on" class="btn btn-click-sound">
+              <i class="fa fa-music" aria-hidden="true"></i>
+              Play Music
+            </a>
+            <a href="./dining.html" class="btn btn-click-sound dining"
+              >Door 1: The Dining Room</a
+            >
+            <!-- <a href="#" class="btn btn-click-sound dining"
+              >Door 1: The Dining Room</a
+            > -->
+            <br />
+            <a href="./basement.html" class="btn btn-click-sound"
+              >Door 2: The Basement</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- MUSIC -->
+    <audio class="backgroundsound" loop autoplay>
+      <source src="../assets/music/backgroundmusic.mp3" />
+    </audio>
+    <audio class="btn-sound">
+      <source src="../assets/music/se-dramatic-whooshes.wav" />
+    </audio>
 
-  <!-- JavaScript File -->
-  <!-- <script src="../assets/script/script.js"></script> -->
-  <script>
-    const clickSoundBtns = document.querySelectorAll(".btn-click-sound");
-    const btnSound = document.querySelector(".btn-sound");
-    // Making sound effect for all btns
-    clickSoundBtns.forEach((allbtns) =>
-        allbtns.addEventListener("click", () => btnSound.play())
-    );
-  </script>
-</body>
+    <!-- <audio class="btn-sound" src="../assets/music/btnsound.mp3"></audio> -->
 
+    <!-- JavaScript File -->
+    <!-- <script src="../assets/script/script.js"></script> -->
+    <script>
+      const soundon = document.querySelector("#sound-on");
+      const clickSoundBtns = document.querySelectorAll(".btn-click-sound");
+      const backgroundSound = document.querySelector(".backgroundsound");
+      const btnSound = document.querySelector(".btn-sound");
+      // Making sound effect for all btns
+      clickSoundBtns.forEach((allbtns) =>
+        allbtns.addEventListener("click", () => {
+          btnSound.play();
+          console.log("clicked");
+        })
+      );
+      // Background Music
+      const soundonmusic = () => {
+        if (backgroundSound.paused) {
+          soundon.innerHTML =
+            ' <i class="fa fa-stop" aria-hidden="true"></i> Stop Music ';
+          backgroundSound.play();
+        } else {
+          backgroundSound.pause();
+          soundon.innerHTML =
+            '<i class="fa fa-music" aria-hidden="true"></i> Play Music ';
+        }
+      };
+
+      soundon.addEventListener("click", soundonmusic);
+    </script>
+  </body>
 </html>
