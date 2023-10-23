@@ -90,7 +90,7 @@ During the planning stage, we utilized Balsamiq for crafting our wireframes.
 * ![The basement](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/wireframes/basement.png)
 
 
-* ![Room Design]('./../documentation/room-design.png')
+* ![Room Design](https://github.com/nils-n/boo-army/blob/axe-branch/documentation/room-design.png)
 
 
 ## Features
