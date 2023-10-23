@@ -24,6 +24,8 @@ const soundonmusic = () => {
   }
 };
 
+
+
 soundon.addEventListener("click", soundonmusic);
 
 // Navbar toggling
@@ -40,10 +42,12 @@ const navbarHide = function () {
 navbarHide();
 
 const rulesHide = () => {
+
   rules.classList.add("visibility");
 };
 const rulesShow = () => {
   rules.classList.remove("visibility");
+
 };
 rulesLink.addEventListener("click", rulesShow);
 rulesClosingBtn.addEventListener("click", rulesHide);
@@ -76,7 +80,9 @@ clickSoundBtns.forEach((allbtns) =>
 /*! JS Bat by Eric Grange - https://www.delphitools.info/2013/10/30/pimp-your-website-with-an-halloween-bat/ */
 /* THIS CODE IS MODIFIED AND THE FUNCTION IS CALLED FEW TIMES TO ENSURE THAT THE BATS ARE MULTIPLE  */
 const bat = function () {
+
   var r = Math.random,
+
     n = 0,
     d = document,
     w = window,
@@ -85,6 +91,7 @@ const bat = function () {
     zs = z.style,
     a = w.innerWidth * r(),
     b = w.innerHeight * r();
+
   zs.position = "fixed";
   zs.left = 0;
   zs.top = 0;
@@ -100,6 +107,7 @@ const bat = function () {
     var x = R(a, w.innerWidth),
       y = R(b, w.innerHeight),
       d = 5 * Math.sqrt((a - x) * (a - x) + (b - y) * (b - y));
+
     zs.opacity = n;
     n = 1;
     zs.transition = zs.webkitTransition = d / 1e3 + "s linear";
@@ -108,6 +116,7 @@ const bat = function () {
     a = x;
     b = y;
     setTimeout(A, d);
+
   }
   setTimeout(A, r() * 3e3);
 };
@@ -123,3 +132,4 @@ bat();
 bat();
 bat();
 // END OF BATS CODE
+

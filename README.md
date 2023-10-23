@@ -2,9 +2,12 @@
 
 Welcome to the Haunted Choices web application, developed Team Boo Army for the Code Institute's October Hackathon. Get ready to immerse yourself in the world of spooky tales and interactive narratives. This web application features one horror story available and another two upcoming each with multiple choices and chilling consequences. Explore the eerie, Halloween-themed design while you navigate through terrifying narratives.
 
+Feel free to access the [live website](https://nils-n.github.io/boo-army/) (CTRL + Click to open in a new tab).
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
+
 2. [How to Use](#how-to-use)
 3. [User Experience](#user-experience)
 4. [Features](#features)
@@ -30,6 +33,7 @@ Haunted Choices is a web application designed to provide an immersive and spine-
 ### User Stories
 
 As a user I would like: 
+
 
 * Use click on the story to start.
 
@@ -186,7 +190,6 @@ We employed W3C for HTML validation across all pages of the website, and it was 
 
 * Due to time constraints, there wasn't an opportunity to address and rectify these code warnings. However, this is a task we plan to tackle in the future.
 
-
 ## Credits 
 
 ### Contributing
@@ -212,6 +215,7 @@ We welcome contributions to improve and expand the Halloween Horror Stories web 
 - We'd like to thank the Code Institute and the Hackathon organizers for the opportunity to create this spooky web application.
 
 - We also want to express our gratitude to our families for their understanding and support while we immersed ourselves in coding for a few days.
+
 
 
 ### Meet the Boo Army Team (Alphabetical Order)

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
@@ -31,11 +32,13 @@ body {
   padding: 0;
   display: inline-block;
   text-decoration: none;
+
 }
 
 /* Burning Heading */
 
 .main-title {
+
   font-size: 3rem;
   background: linear-gradient(to right, #ffffff, #fafdfd, #ffffffb3);
   -webkit-background-clip: text;
@@ -60,11 +63,13 @@ body {
     text-shadow: 2px 2px 15px #ff6600;
   }
   100% {
+
     text-shadow: 2px 2px 4px #ff6600;
   }
 }
 
 .story-buttons {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,6 +123,7 @@ a {
 
 .btn:hover:before {
   left: 100%;
+
 }
 
 .hidden {
@@ -133,15 +139,18 @@ a {
 }
 
 .rules {
+
   max-width: 800px;
   background-color: white;
   padding: 25px;
   border-radius: 15px;
   margin: 20px auto;
   position: relative;
+
 }
 
 .rule-close-btn {
+
   position: absolute;
   top: 15px;
   font-size: 22px;
@@ -151,6 +160,7 @@ a {
   padding: 5px;
   right: 25px;
   cursor: pointer;
+
 }
 
 .rule-close-btn:hover {
@@ -158,6 +168,7 @@ a {
 }
 
 .rules-content-title {
+
   margin-bottom: 20px;
   text-align: center;
 }
@@ -180,11 +191,13 @@ a {
   font-family: sans-serif;
   font-size: 1.1rem;
   margin: 5px 0;
+
 }
 
 /* closing the instructions - x button*/
 
 .closingbtn {
+
   border-radius: 10px;
   position: absolute;
   top: 25px;
@@ -194,6 +207,7 @@ a {
   background-color: #ff6600;
   color: white;
   cursor: pointer;
+
 }
 
 /* Footer */
@@ -346,3 +360,4 @@ li {
 .btn-pullup:hover:before {
   width: 100%;
 }
+

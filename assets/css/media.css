@@ -1,11 +1,12 @@
 .menu {
   display: none;
-}
-.cross {
+  }
+  .cross {
   display: none;
-}
-.hiding {
+  }
+  .hiding {
   display: block;
+
 }
 @media (max-width: 1025px) {
   footer {
@@ -78,29 +79,48 @@
 }
 
 @media (max-width: 732px) {
+
   html {
-    font-size: 13px;
+  font-size: 13px;
   }
+  body {
+  overflow: visible;
+  height: 100% !important;
+  }
+
   body {
     overflow: visible;
     height: 100% !important;
   }
 
   .menu {
-    display: block;
-    padding: 5px 0;
+  display: block;
+  padding: 5px 0;
   }
   .cross {
-    display: block;
+  display: block;
   }
-
+  
   .hiding {
-    display: none;
+  display: none;
+  }
+  
+  .main-block {
+  margin-top: 40px;
+  }
+  .container {
+  padding: 20px !important;
+  }
+  
+  /* for main btns */
+  .story-buttons .btn {
+  width: 300px !important;
+  }
+  footer {
+  padding-top: 80px;
+  position: static !important;
   }
 
-  .main-block {
-    margin-top: 40px;
-  }
   .container {
     padding: 20px !important;
   }
@@ -114,3 +134,4 @@
     position: static !important;
   }
 }
+
