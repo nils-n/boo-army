@@ -90,6 +90,9 @@ During the planning stage, we utilized Balsamiq for crafting our wireframes.
 * ![The basement](https://github.com/nils-n/boo-army/blob/zai.3-branch/documentation/wireframes/basement.png)
 
 
+* ![Room Design](https://github.com/nils-n/boo-army/blob/axe-branch/documentation/room-design.png)
+
+
 ## Features
 
 * Three Distinct Horror Stories: Dive into three spine-tingling narratives, each with its own unique storyline, characters, and choices. One is available and other two are upcoming, so stay tuned.
@@ -141,8 +144,9 @@ The project also utilizes the following frameworks, libraries, and programs:
 * Am I Responsive: to check if the website is responsive for various devices and screen sizes.
 * Coolors: to create the colour palette
 * Three.js: to create and build the rooms.
-* Vite React: for the build of optimized assets for production
 * FigJam: to create brainstorm ideas in real-time.
+* Vite + React: for the build of optimized assets for production
+* Figma: moodboard and textures for the rooms.
 * Pixabay: for the royalty-free music and sound effects
 
 

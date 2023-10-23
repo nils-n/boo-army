@@ -1,7 +1,9 @@
 console.log("well hello there");
 
+const basementContainer = document.getElementById("dialog-container");
 const basementOption1Button = document.getElementById("basement-option-1");
 const basementOption2Button = document.getElementById("basement-option-2");
+const basementOption3Button = document.getElementById("basement-option-3");
 const basementEndGameButton = document.getElementById("basement-end-game");
 const basementOptionHeader = document.getElementById("basement-dialog-header");
 
@@ -9,12 +11,10 @@ const basementOptionHeader = document.getElementById("basement-dialog-header");
 basementOption1Button.addEventListener("click", function () {
   console.log("Basement - Option 1 chosen");
 
-  basementOptionHeader.innerText = `Your choices have led to a gruesome end.
-     
-
-        The End.`;
+  basementOptionHeader.innerText = `You see the gruesome zombies walking towards you...`;
 
   // make two options invisiuble and show the end game option
+  basementContainer.classList.add("d-none");
   basementOption1Button.classList.add("d-none");
   basementOption2Button.classList.add("d-none");
   basementEndGameButton.classList.remove("d-none");
@@ -27,7 +27,7 @@ basementOption2Button.addEventListener("click", function () {
 });
 
 // When basementButton is clicked, hide defendModal and show basementModal
-basementOption2Button.addEventListener("click", function () {
+basementOption3Button.addEventListener("click", function () {
   console.log("Basement - Option 2 chosen");
   window.location.href = "dining.html";
 });
